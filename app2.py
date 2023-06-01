@@ -4,7 +4,7 @@ from flask import Flask, render_template, jsonify
 app2 = Flask(__name__)
 
 projects = [
-    {'id': 1, 'name': 'Virtual Calculator','date':  '2024' },
+    {'id': 1, 'name': 'Virtual Calculator','date':  '2023' },
     {'id': 2, 'name': 'App Tec','date':  '2023'},
     {'id': 3,'name': 'Paint','date':  '2022'}
 ]
