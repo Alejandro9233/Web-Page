@@ -17,26 +17,28 @@
 </style>
 <body>
     {% include 'nav.html' %}
+    
     <div class="container">
-            <h1 class="text-center mt-2 mb-4" >{{company_name}}'s Career</h1>
         <figure class="figure">
             <img id="baner" class="img-fluid rounded mx-auto d-block" src="https://pbs.twimg.com/media/Fuk2SX_aUAEKuKt?format=jpg&name=large" alt="banner">
         <figcaption class="figure-caption">"Very little is needed to make a happy life; it is all within yourself, in your way of thinking."</figcaption>
         </figure>
-            <h2 class="text-center mt-2 mb-4">About me</h2>
-            <p class="text-center lead mt-2 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde perferendis cum possimus corrupti ad neque, aut deserunt doloremque sed culpa aliquid expedita iure? Odit, repellat tempore illo itaque dolorum tempora ipsa quaerat at earum iure. Facilis culpa quasi esse veniam ullam sit quas possimus repellendus dolorum maiores expedita laboriosam, officiis, beatae hic repudiandae. Nemo laboriosam corporis eligendi, nobis fuga quam voluptatibus. Corporis ducimus autem deleniti accusantium odio consectetur dolore distinctio natus inventore itaque, quidem excepturi, quod fuga sed voluptas maxime ex cum sunt, vero beatae qui at totam sint! At pariatur asperiores fugit repellendus rem, laborum perferendis nulla doloribus maiores?</p>
-            <h2 class="text-center mt-2 mb-4">Projects by my own</h2>
-            <p class="text-center mt-2 mb-4">
-                {% for project in projects %}
-                    {% include 'porjectItem.html' %}
-                {% endfor %}
-            </p>   
-            <div class="text-center">
-                <button class="btn btn-dark">Contact Me</button>
-                
-                <p class="text-center mt-4">Copyright 2023, Alejandro</p>    
-            </div>
+        <h1 class="text-center mt-2 mb-4" >{{company_name}}'s Career</h1>
+
+        <p class="text-center lead mt-2 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde perferendis cum possimus corrupti ad neque, aut deserunt doloremque sed culpa aliquid expedita iure? Odit, repellat tempore illo itaque dolorum tempora ipsa quaerat at earum iure. Facilis culpa quasi esse veniam ullam sit quas possimus repellendus dolorum maiores expedita laboriosam, officiis, beatae hic repudiandae. Nemo laboriosam corporis eligendi, nobis fuga quam voluptatibus. Corporis ducimus autem deleniti accusantium odio consectetur dolore distinctio natus inventore itaque, quidem excepturi, quod fuga sed voluptas maxime ex cum sunt, vero beatae qui at totam sint! At pariatur asperiores fugit repellendus rem, laborum perferendis nulla doloribus maiores?</p>
+        <h2 class="text-center mt-2 mb-4">Projects by my own</h2>
+        <p class="text-center mt-2 mb-4">
+            {% for project in projects %}
+                {% include 'porjectItem.html' %}
+            {% endfor %}
+        </p>   
+        <div class="text-center">
+            <button class="btn btn-dark">Contact Me</button>
+            
+            <p class="text-center mt-4">Copyright 2023, Alejandro</p>
+        </div>
 
     </div>
+    {% include 'footer.html' %}
 </body>
 </html>
