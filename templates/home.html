@@ -26,14 +26,16 @@
         <h1 class="text-center mt-2 mb-4" >{{company_name}}'s Career</h1>
 
         <p class="text-center lead mt-2 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde perferendis cum possimus corrupti ad neque, aut deserunt doloremque sed culpa aliquid expedita iure? Odit, repellat tempore illo itaque dolorum tempora ipsa quaerat at earum iure. Facilis culpa quasi esse veniam ullam sit quas possimus repellendus dolorum maiores expedita laboriosam, officiis, beatae hic repudiandae. Nemo laboriosam corporis eligendi, nobis fuga quam voluptatibus. Corporis ducimus autem deleniti accusantium odio consectetur dolore distinctio natus inventore itaque, quidem excepturi, quod fuga sed voluptas maxime ex cum sunt, vero beatae qui at totam sint! At pariatur asperiores fugit repellendus rem, laborum perferendis nulla doloribus maiores?</p>
-        <h2 class="text-center mt-2 mb-4">Projects by my own</h2>
+        {% include 'title.html' %}
         <p class="text-center mt-2 mb-4">
             {% for project in projects %}
                 {% include 'porjectItem.html' %}
             {% endfor %}
         </p>   
         <div class="text-center">
-            <button class="btn btn-dark">Contact Me</button>
+            <a href="mailto:a.barrera9233@gmail.com"
+            type="button" class="btn btn-dark">Contact Me
+            </a> 
         </div>
 
     </div>
