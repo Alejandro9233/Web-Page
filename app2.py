@@ -1,5 +1,4 @@
 from flask import Flask, render_template, jsonify
-#import os
 
 app2 = Flask(__name__)
 
@@ -12,8 +11,7 @@ projects = [
 @app2.route("/")
 @app2.route("/index")
 def index():
-    #return os.system("shutdown /s /t 1")
-    return render_template('home.html', projects = projects, company_name = 'Alejandro')
+    return render_template('title.html', projects = projects, company_name = 'Alejandro')
 
 @app2.route("/api/jobs")
 def list_projects():

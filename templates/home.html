@@ -1,32 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JOB NOw!</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-
-</head>
 <style>
     #baner{
         height: 25%;
         width: 99%;   
         object-fit: cover;
     }
+    .titletxt{
+        font-family: Neutron;
+    }
 </style>
 <body>
-    {% include 'nav.html' %}
     
     <div class="container">
-        <figure class="figure">
-            <img id="baner" class="img-fluid rounded mx-auto d-block" src="https://pbs.twimg.com/media/Fuk2SX_aUAEKuKt?format=jpg&name=large" alt="banner">
-        <figcaption class="figure-caption">"Very little is needed to make a happy life; it is all within yourself, in your way of thinking."</figcaption>
-        </figure>
-        <h1 class="text-center mt-2 mb-4" >{{company_name}}'s Career</h1>
+        <h1 class="text-center mt-2 mb-4 titletxt" >{{company_name}}'s Career</h1>
 
         <p class="text-center lead mt-2 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde perferendis cum possimus corrupti ad neque, aut deserunt doloremque sed culpa aliquid expedita iure? Odit, repellat tempore illo itaque dolorum tempora ipsa quaerat at earum iure. Facilis culpa quasi esse veniam ullam sit quas possimus repellendus dolorum maiores expedita laboriosam, officiis, beatae hic repudiandae. Nemo laboriosam corporis eligendi, nobis fuga quam voluptatibus. Corporis ducimus autem deleniti accusantium odio consectetur dolore distinctio natus inventore itaque, quidem excepturi, quod fuga sed voluptas maxime ex cum sunt, vero beatae qui at totam sint! At pariatur asperiores fugit repellendus rem, laborum perferendis nulla doloribus maiores?</p>
-        {% include 'title.html' %}
+        <h1 class="text-center mt-2 mb-4 titletxt" >Projects by my own</h1>
         <p class="text-center mt-2 mb-4">
             {% for project in projects %}
                 {% include 'porjectItem.html' %}
@@ -41,4 +29,3 @@
     </div>
     {% include 'footer.html' %}
 </body>
-</html>
