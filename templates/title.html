@@ -63,13 +63,38 @@ box-sizing: border-box;
 
 <div class="hero-banner">
     <div class="hero-banner__title" aria-hidden="true">KEEP IT SIMPLE</div>
-    <img class="hero-banner__image" src="https://wallpapercave.com/wp/wp5019119.jpg"/>
+    <img class="hero-banner__image" alt="" id="unsplashImage"/>
     <h1 class="hero-banner__title hero-banner__stroked-title">KEEP IT SIMPLE</h1>
   </div>
   
   <div class="content">
     {% include 'home.html' %}
   </div>
+
+  <script>
+
+let clientID = "7Sx1GAg3AJLVsCiONAQ-GkPFeHphNTzUYz3gIRPjmHM";
+let endpoint = `https://api.unsplash.com/photos/random/?client_id=${clientID}`;
+let imageElement = document.querySelector("#unsplashImage");
+let imageLink = document.querySelector("#imageLink");
+let creator = document.querySelector("#creator");
+
+fetch(endpoint)
+.then(function (response) {
+return response.json();
+})
+.then(function (jsonData) {
+imageElement.src = jsonData.urls.regular;
+imageLink.setAttribute("href", jsonData.links.html);
+creator.innerText = jsonData. user.name;
+creator.setAttribute("href", jsonData.user.portfolio_url);
+})
+.catch(function (error) {
+  console.log("error: " + error);
+})
+
+  </script>
+
 </body>
   
 </html>
