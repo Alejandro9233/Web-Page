@@ -1,8 +1,10 @@
 <div class="border-bottom row justify-content-between" style="margin-bottom: 16px; padding-bottom: 8px;">
     <div class="col-9">
-        <h4>{{project['name']}}</h4>
+        <h4>{{project['tittle']}} <span class="mb-3 mb-md-0 text-body-secondary" style="font-size: x-small;">  ©{{project['birthday']}} </span></h4>
         <div class="mb-1">
-            <b>Date: </b>{{project['date']}}
+            <b>By: </b> <a href="https://github.com/Alejandro9233" target="_blank" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                {{project['author']}}
+            </a>
         </div>
     </div>
     <div class="col-3 d-flex justify-content-end">
