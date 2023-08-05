@@ -1,8 +1,8 @@
 """This the database conection"""
-import os
+
 from sqlalchemy import create_engine, text
 
-DB = os.environ['KEY_DB']
+DB = "mysql+pymysql://aa4zmtx5ce4ww9gudkms:pscale_pw_HmdBPdqaVxzMebBsKwsPxiqvaZa3j8CvLEMS33H4lyW@aws.connect.psdb.cloud/alejandro_career?charset=utf8mb4"
 
 engine = create_engine(
     DB,
