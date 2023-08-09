@@ -1,17 +1,23 @@
-"""This the database conection"""
+# We keep the db key access inside the .env so.
 
+import os
+import requests
 from sqlalchemy import create_engine, text
+from dotenv import load_dotenv
 
-DB = "mysql+pymysql://aa4zmtx5ce4ww9gudkms:pscale_pw_HmdBPdqaVxzMebBsKwsPxiqvaZa3j8CvLEMS33H4lyW@aws.connect.psdb.cloud/alejandro_career?charset=utf8mb4"
+
+load_dotenv()
 
 engine = create_engine(
-    DB,
+    os.getenv('db_key'),
     connect_args={
         "ssl": {
             "ssl_ca": "/etc/ssl/cert.pem"
         }
     }
 )
+
+
 
 def load_projects_from_db():
     with engine.connect() as conn:
@@ -28,3 +34,4 @@ def load_projects_from_db():
             }
             projects.append(my_dict)
         return projects
+    
