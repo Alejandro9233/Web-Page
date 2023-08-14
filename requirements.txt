@@ -1,6 +1,4 @@
 Flask
 gunicorn
 sqlalchemy
-requests
-dotenv
 pymysql
