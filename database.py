@@ -1,7 +1,6 @@
 # We keep the db key access inside the .env so.
 
 import os
-import requests
 from sqlalchemy import create_engine, text
 from dotenv import load_dotenv
 
