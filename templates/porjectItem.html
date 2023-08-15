@@ -2,13 +2,13 @@
     <div class="col-9">
         <h4>{{project['tittle']}} <span class="mb-3 mb-md-0 text-body-secondary" style="font-size: x-small;">  ©{{project['birthday']}} </span></h4>
         <div class="mb-1">
-            <b>By: </b> <a href="https://github.com/Alejandro9233" target="_blank" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+            <b>By: </b> <a href= "{{project['github_profile']}}" target="_blank" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
                 {{project['author']}}
             </a>
         </div>
     </div>
     <div class="col-3 d-flex justify-content-end">
-        <a href="https://codepen.io/Alejandro9233-the-selector/pen/PoxpRXj" target="_blank"
+        <a href= "{{project['app_link']}}" target="_blank"
         type="button" class="btn btn-outline-secondary col align-self-center">Explore</a>
     </div>
 </div>

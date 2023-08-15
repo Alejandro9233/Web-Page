@@ -29,8 +29,30 @@ def load_projects_from_db():
                 'tittle': row[1],
                 'location': row[2],
                 'birthday': row[3],
-                'author': row[4]
+                'author': row[4],
+                'app_link': row[5],
+                'github_profile': row[6]
             }
             projects.append(my_dict)
         return projects
     
+
+def load_project_from_db(id):
+    with engine.connect() as conn:
+        result = conn.execute(text("SELECT * FROM projects WHERE id = :id"), {'id':id})
+        result_all = result.fetchall()
+        if len(result_all) == 0:
+            return None
+        projects = []
+        for row in result_all:
+            my_dict = {
+                'id': row[0],
+                'title': row[1],
+                'location': row[2],
+                'birthday': row[3],
+                'author': row[4],
+                'app_link': row[5],
+                'github_profile': row[6]
+            }
+            projects.append(my_dict)
+        return projects
