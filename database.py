@@ -37,6 +37,18 @@ def load_projects_from_db():
         return projects
     
 
+def load_api_key(title):
+    with engine.connect() as conn:
+        result = conn.execute(text("SELECT * FROM api_keys WHERE title = :title"),{'title':title})
+        api_key = result.fetchall()
+        if len(api_key) == 0:
+            return None
+        key = ""
+        for i in api_key:
+            key = i[2]
+        return key
+    
+
 def load_project_from_db(id):
     with engine.connect() as conn:
         result = conn.execute(text("SELECT * FROM projects WHERE id = :id"), {'id':id})

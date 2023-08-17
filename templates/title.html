@@ -70,13 +70,13 @@ box-sizing: border-box;
 </a>
   
   <div id="content">
-
+    <p hidden id="keyunp">{{unsplash_key}}</p>
     {% include 'home.html' %}
   </div>
 
   <script>
-
-let clientID = `7Sx1GAg3AJLVsCiONAQ-GkPFeHphNTzUYz3gIRPjmHM`;
+let code = document.getElementById("keyunp").innerHTML;
+let clientID = code;
 let endpoint = `https://api.unsplash.com/photos/random/?client_id=${clientID}`;
 
 let imageElement = document.querySelector("#unsplashImage");
