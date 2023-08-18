@@ -6,9 +6,15 @@ app2 = Flask(__name__)
 @app2.route("/")
 @app2.route("/index")
 def index():
-    projects = load_projects_from_db()
     unsplash_key = load_api_key('unplash_key')
-    return render_template('title.html', projects = projects, unsplash_key = unsplash_key)
+    return render_template('title.html', unsplash_key = unsplash_key)
+
+
+@app2.route("/projects")
+def me():
+    projects = load_projects_from_db()
+    return render_template('home.html', projects = projects)
+
 
 @app2.route("/api/projects")
 def list_projects():

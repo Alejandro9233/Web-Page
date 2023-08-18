@@ -45,7 +45,7 @@ width: 700px;
 
 #content {
 background-color: #ffffff;
-padding: 110px 0px 0px 30px;
+padding: 110px 0px 0px 60px;
 }
 
 body {
@@ -71,8 +71,11 @@ box-sizing: border-box;
   
   <div id="content">
     <p hidden id="keyunp">{{unsplash_key}}</p>
-    {% include 'home.html' %}
+    {% include 'cv.html' %}
+    {% include 'footer.html' %}  
   </div>
+  
+
 
   <script>
 let code = document.getElementById("keyunp").innerHTML;
