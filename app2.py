@@ -11,9 +11,15 @@ def index():
 
 
 @app2.route("/projects")
-def me():
+def jobs():
     projects = load_projects_from_db()
-    return render_template('home.html', projects = projects)
+    return render_template('projects.html', projects = projects)
+
+
+@app2.route("/about")
+def me():
+    return render_template('aboutme.html')
+
 
 
 @app2.route("/api/projects")
