@@ -1,5 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+.wrapper {
+  position: relative;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: hsl(0,0%,95%);
+  box-shadow: 1px 1px 25px 3px rgba(0,0,0,.3); 
+}
+</style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,19 +23,28 @@
 <body>
     {% include 'nav.html' %}
 
-    <div class="container" style="padding-top: 3%;">
+    <div class="container border-bottom" style="padding-top: 3%;">
         <h1 class="text-center mt-2 mb-4 titletxt">Alejandro's About</h1>
+        <div class="row" style="padding-top: 3%;">
+            <div class="col-6">
+                <div id="about">
 
-        <div id="about">
-
-            <p class="text-center lead mt-2 mb-4">As a computer science student at Tecnologico de Monterrey, I find joy in a variety of activities. Aside from coding and learning new programming languages, I also enjoy staying active through exercise. Whether it's going for a run or hitting the gym, I find that physical activity helps me stay focused and energized throughout the day.</p>
-            <p class="text-center lead mt-2 mb-4">In addition to staying active, I also enjoy solving problems on platforms like LeetCode. I find these challenges to be both fun and rewarding, as they allow me to apply my coding skills in a practical way. I believe that problem-solving is an essential skill for any computer science student, and I enjoy taking on new challenges whenever I can.</p>
-            <p class="text-center lead mt-2 mb-4">Finally, I believe that being a good teammate is crucial for success in any field. That's why I always strive to add value to any team that I'm a part of. Whether it's through my technical skills, my ability to communicate effectively, or my willingness to help others, I believe that being a good teammate is essential for achieving our collective goals.</p>
-            <p class="text-center lead mt-2 mb-4">Overall, I'm excited to continue my journey as a computer science student, and I look forward to exploring new opportunities for growth and learning in the years ahead.</p>
-
-        </div>
-
+                    <p class="lh-base lead mt-2 mb-4">As a computer science student at Tecnologico de Monterrey, I find joy in a variety of activities. Aside from coding and learning new programming languages, I also enjoy staying active through exercise. Whether it's going for a run or hitting the gym, I find that physical activity helps me stay focused and energized throughout the day.</p>
+                    <p class="lh-base lead mt-2 mb-4">In addition to staying active, I also enjoy solving problems on platforms like LeetCode. I find these challenges to be both fun and rewarding, as they allow me to apply my coding skills in a practical way. I believe that problem-solving is an essential skill for any computer science student, and I enjoy taking on new challenges whenever I can.</p>
+                    <p class="lh-base lead mt-2 mb-4">Finally, I believe that being a good teammate is crucial for success in any field. That's why I always strive to add value to any team that I'm a part of. Whether it's through my technical skills, my ability to communicate effectively, or my willingness to help others, I believe that being a good teammate is essential for achieving our collective goals.</p>
+                    <p class="lh-base lead mt-2 mb-4">Overall, I'm excited to continue my journey as a computer science student, and I look forward to exploring new opportunities for growth and learning in the years ahead.</p>
+        
+                </div>
+            </div>
+            <div class="col-6" style="padding-top: 4%;">
+                <img class="wrapper rounded" src="https://pbs.twimg.com/media/F4pO_qdWIAApoHV?format=jpg&name=small" alt="foto at the museum">
+                <figcaption class="figure-caption text-xxl-end" style="padding-top: 1%;">"Very little is needed to make a happy life; it is all within yourself, in your way of thinking."</figcaption>
+                <figcaption class="figure-caption text-xxl-end" style="padding-top: 1%;">Marcus Aureluis</figcaption>
+            </div>
+          </div>
     </div>
+
+    {% include 'cv.html' %}
 
     {% include 'footer.html' %}
 </body>
