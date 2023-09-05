@@ -1,15 +1,19 @@
-<style>
-    #pdf
-    {
-        display: grid;
-        grid: center;
-    }
 
+<style>
+    .container {
+        display: grid;
+        place-items: center;
+        height: 100vh;  /* takes up the full viewport height */
+    }
+    #pdf {
+        width: 80%;
+        height: 1000px;
+    }
 </style>
+</head>
 <body>
-    <div class="container" style="padding-top: 5%;">
-        <h1 class="text-center mt-2 mb-4 titletxt" style="padding-bottom: 3%;">Alejandro's CV</h1>
-        <iframe id="pdf" src="https://drive.google.com/file/d/1F_KqTxanPXjLKsT1X1xH2gkd3JvuKpYV/preview#view=Fit" width="80%" height="1000px" allow="autoplay"></iframe>
+    <div class="container">
+        <h1 class="text-center mt-2 mb-4 titletxt">Alejandro's CV</h1>
+        <iframe id="pdf" src="https://drive.google.com/file/d/1F_KqTxanPXjLKsT1X1xH2gkd3JvuKpYV/preview#view=Fit" allow="autoplay"></iframe>
     </div>
-    
 </body>
